@@ -1,9 +1,4 @@
-steps:
 
-# Install node packages
-- name: node
-  entrypoint: npm
-  args: ['install']
 
 # Build productive files 
 - name: node
