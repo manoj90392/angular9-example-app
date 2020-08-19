@@ -3,10 +3,5 @@ steps:
 # Install node packages
 - name: node
   entrypoint: npm
-  args: ['install']
-  
-- name: 'gcr.io/cloud-builders/gsutil'
-  entrypoint: 'bash'
-  args:
-  - '-c'
-  - |
+  args: ['instal']
+ 
