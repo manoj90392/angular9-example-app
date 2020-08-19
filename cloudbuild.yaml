@@ -1,0 +1,18 @@
+steps:
+
+# Install node packages
+- name: node
+  entrypoint: npm
+  args: ['install']
+
+# Build productive files 
+- name: node
+  entrypoint: npm
+  args: [ 'run', 'build', '--prod' ]
+  
+- name: 'gcr.io/cloud-builders/gsutil'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    gsutil -m cp -r  dist/** gs://angularjsbucket
