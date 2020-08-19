@@ -1,4 +1,9 @@
+steps:
 
+# Install node packages
+- name: node
+  entrypoint: npm
+  args: ['install']
 
 # Build productive files 
 - name: node
@@ -10,4 +15,3 @@
   args:
   - '-c'
   - |
-    gsutil -m cp -r  dist/** gs://angularjsbucket
